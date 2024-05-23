@@ -43,3 +43,8 @@ export const SOCIALS: Socials = [
     HREF: "https://www.instagram.com/z96themix",
   }
 ];
+
+export const EXTERNAL_LINK: Metadata = { 
+  TITLE: "open in a new window",
+  DESCRIPTION: "https://live.thackerbroadcasting.com/public/z96_mix",
+};
