@@ -1,0 +1,23 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+import { EXTERNAL_LINK, REQUESTS } from "@consts";
+
+---
+
+<PageLayout title={REQUESTS.TITLE} description={REQUESTS.DESCRIPTION}>
+    <Container>
+      <h4 class="animate font-semibold text-black dark:text-white">
+        Requests
+      </h4>
+      <br>
+      <p class="animate">
+        This is YOUR station! Make requests to your hearts content*, and keep your favorites coming with more control than ever before. Even when we're not in the studio! If the request box below isn't displaying right, click <Link href=https://live.thackerbroadcasting.com/public/z96_mix>here</Link>.
+      </p>
+      <br>
+      <p class="animate">
+        <iframe src="https://live.thackerbroadcasting.com/public/z96_mix/embed-requests" allowtransparency="true" style="width: 100%; min-height: 950px; border: 0;"></iframe>
+      </p>
+    </Container>
+</PageLayout>

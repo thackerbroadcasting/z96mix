@@ -24,14 +24,14 @@ export const BLOG: Metadata = {
   DESCRIPTION: "Our posts",
 };
 
-export const WORK: Metadata = {
-  TITLE: "Work",
-  DESCRIPTION: "We don't use this section.",
+export const SCHEDULE: Metadata = {
+  TITLE: "Schedule",
+  DESCRIPTION: "Our schedule",
 };
 
-export const PROJECTS: Metadata = {
-  TITLE: "Projects",
-  DESCRIPTION: "We don't use this section",
+export const REQUESTS: Metadata = {
+  TITLE: "Requests",
+  DESCRIPTION: "Request songs",
 };
 
 export const SOCIALS: Socials = [
