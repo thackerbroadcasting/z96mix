@@ -32,11 +32,12 @@ const blog = (await getCollection("blog"))
         <h4 class="font-semibold text-black dark:text-white">
           Live Stream
         </h4>
-        <p>
-          <i>We know this looks weird in dark mode. We're working on a fix for this.</i>
-        </p>
-        <!--<iframe class="animate" src="https://live.thackerbroadcasting.com/public/z96_mix/embed" allowtransparency="true" style="width: 100%; height: 150px; border: 0; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 4px; padding: 20px "></iframe>-->
-        <iframe src="https://live.thackerbroadcasting.com/public/z96_mix/embed" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
+        <div>
+          <!-- LIGHT MODE -->
+          <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/embed?theme=light" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
+          <!-- DARK MODE -->
+          <iframe class="hidden dark:block" src="https://live.thackerbroadcasting.com/public/z96_mix/embed?theme=dark" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0; color-scheme: light;"></iframe>
+        </div>
         <Link href={EXTERNAL_LINK.DESCRIPTION} external aria-label={`${SITE.NAME} on ${EXTERNAL_LINK.TITLE}`}>
           {EXTERNAL_LINK.TITLE}
         </Link>

@@ -17,8 +17,10 @@ import { SCHEDULE } from "@consts";
       </p>
       <br>
       <p class="animate">
-        <iframe src="https://live.thackerbroadcasting.com/public/z96_mix/schedule/embed" allowtransparency="true" style="width: 100%; min-height: 800px; border: 0;"></iframe>
-        <!--<iframe src={EXTERNAL_LINK.DESCRIPTION += '/schedule/embed'} allowtransparency="true" style="width: 100%; min-height: 800px; border: 0;"></iframe>-->
+        <!-- LIGHT MODE -->
+        <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/schedule/embed?theme=light" allowtransparency="true" style="width: 100%; min-height: 850px; border: 0;"></iframe>
+        <!-- DARK MODE -->
+        <iframe class="hidden dark:block" src="https://live.thackerbroadcasting.com/public/z96_mix/schedule/embed?theme=dark" allowtransparency="true" style="width: 100%; min-height: 850px; border: 0; color-scheme: light;"></iframe>
       </p>
     </Container>
 </PageLayout>
