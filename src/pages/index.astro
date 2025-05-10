@@ -16,22 +16,22 @@ const blog = (await getCollection("blog"))
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
+    <h1 class="animate font-semibold text-black dark:text-white">
       We're Z96 The Mix, Utah's Best Mix Radio <span class="text-xl">👋🏻</span> 
-    </h4>
+    </h1>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            We're glad you're here! While it may not look like much now, we're working on lots of cool features that we hope will be available soon. For now, read our blog or listen to our live stream below.
+            We're glad you're here! Read the blog, listen to our live stream below, request songs, view our schedule, and see what we've played recently. All in one convenient spot.
           </p>
         </article>
       </section>
 
       <section class="animate">
-        <h4 class="font-semibold text-black dark:text-white">
+        <h2 class="font-semibold text-black dark:text-white">
           Live Stream
-        </h4>
+        </h2>
         <div>
           <!-- LIGHT MODE -->
           <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/embed?theme=light" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
@@ -45,9 +45,9 @@ const blog = (await getCollection("blog"))
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
+          <h2 class="font-semibold text-black dark:text-white">
             Latest posts
-          </h5>
+          </h2>
           <Link href="/blog">
             See all posts
           </Link>
@@ -111,9 +111,9 @@ const blog = (await getCollection("blog"))
     -->
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
+        <h2 class="font-semibold text-black dark:text-white">
           Let's Connect
-        </h5>
+        </h2>
         <article>
           <p>
             

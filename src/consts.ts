@@ -34,6 +34,11 @@ export const REQUESTS: Metadata = {
   DESCRIPTION: "Request songs",
 };
 
+export const HISTORY: Metadata = {
+  TITLE: "History",
+  DESCRIPTION: "Playout history",
+}
+
 export const SOCIALS: Socials = [
   { 
     NAME: "github",
