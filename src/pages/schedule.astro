@@ -2,7 +2,10 @@
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
-import { SCHEDULE } from "@consts";
+import { SITE, SCHEDULE } from "@consts";
+
+const lightThemeSrc = `${SITE.EXTERNAL_LINK}/schedule/embed?theme=light`;
+const darkThemeSrc = `${SITE.EXTERNAL_LINK}/schedule/embed?theme=dark`;
 
 ---
 
@@ -18,9 +21,9 @@ import { SCHEDULE } from "@consts";
       <br>
       <p class="animate">
         <!-- LIGHT MODE -->
-        <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/schedule/embed?theme=light" allowtransparency="true" style="width: 100%; min-height: 1210px; border: 0;"></iframe>
+        <iframe class="dark:hidden" src={lightThemeSrc} allowtransparency="true" style="width: 100%; min-height: 1210px; border: 0;"></iframe>
         <!-- DARK MODE -->
-        <iframe class="hidden dark:block" src="https://live.thackerbroadcasting.com/public/z96_mix/schedule/embed?theme=dark" allowtransparency="true" style="width: 100%; min-height: 1210px; border: 0; color-scheme: light;"></iframe>
+        <iframe class="hidden dark:block" src={darkThemeSrc} allowtransparency="true" style="width: 100%; min-height: 1210px; border: 0; color-scheme: light;"></iframe>
       </p>
     </Container>
 </PageLayout>

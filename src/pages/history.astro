@@ -1,7 +1,10 @@
 ---
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import { HISTORY } from "@consts";
+import { SITE, HISTORY } from "@consts";
+
+const lightThemeSrc = `${SITE.EXTERNAL_LINK}/history?theme=light`;
+const darkThemeSrc = `${SITE.EXTERNAL_LINK}/history?theme=dark`;
 
 ---
 
@@ -14,9 +17,9 @@ import { HISTORY } from "@consts";
       <br>
       <p class="animate">
         <!-- LIGHT MODE -->
-        <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/history?theme=light" allowtransparency="true" style="width: 100%; min-height: 850px"></iframe>
+        <iframe class="dark:hidden" src={lightThemeSrc} allowtransparency="true" style="width: 100%; min-height: 850px"></iframe>
         <!-- DARK MODE -->
-        <iframe class="hidden dark:block" src="https://live.thackerbroadcasting.com/public/z96_mix/history?theme=dark" allowtransparency="true" style="width: 100%; min-height: 850px; color-scheme: light;"></iframe>
+        <iframe class="hidden dark:block" src={darkThemeSrc} allowtransparency="true" style="width: 100%; min-height: 850px; color-scheme: light;"></iframe>
       </p>
     </Container>
 </PageLayout>

@@ -5,12 +5,15 @@ import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 //import { dateRange } from "@lib/utils";
-import { SITE, HOME, SOCIALS, EXTERNAL_LINK } from "@consts";
+import { SITE, HOME, SOCIALS } from "@consts";
 
 const blog = (await getCollection("blog"))
   .filter(post => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const lightThemeSrc = `${SITE.EXTERNAL_LINK}/embed?theme=light`;
+const darkThemeSrc = `${SITE.EXTERNAL_LINK}/embed?theme=dark`;
 
 ---
 
@@ -34,12 +37,12 @@ const blog = (await getCollection("blog"))
         </h2>
         <div>
           <!-- LIGHT MODE -->
-          <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/embed?theme=light" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
+          <iframe class="dark:hidden" src={lightThemeSrc} allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe>
           <!-- DARK MODE -->
-          <iframe class="hidden dark:block" src="https://live.thackerbroadcasting.com/public/z96_mix/embed?theme=dark" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0; color-scheme: light;"></iframe>
+          <iframe class="hidden dark:block" src={darkThemeSrc} allowtransparency="true" style="width: 100%; min-height: 150px; border: 0; color-scheme: light;"></iframe>
         </div>
-        <Link href={EXTERNAL_LINK.DESCRIPTION} external aria-label={`${SITE.NAME} on ${EXTERNAL_LINK.TITLE}`}>
-          {EXTERNAL_LINK.TITLE}
+        <Link href={SITE.EXTERNAL_LINK}>
+          open in a new window
         </Link>
       </section>
 

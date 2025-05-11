@@ -4,6 +4,7 @@ export const SITE: Site = {
   NAME: "Z96 The Mix",
   EMAIL: "contact@thackerbroadcasting.com",
   CALL_SIGN: "KCZH",
+  EXTERNAL_LINK: "https://live.thackerbroadcasting.com/public/z96_mix",
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 0,
   NUM_PROJECTS_ON_HOMEPAGE: 0,
@@ -49,8 +50,3 @@ export const SOCIALS: Socials = [
     HREF: "https://www.instagram.com/z96themix",
   }
 ];
-
-export const EXTERNAL_LINK: Metadata = { 
-  TITLE: "open in a new window",
-  DESCRIPTION: "https://live.thackerbroadcasting.com/public/z96_mix",
-};

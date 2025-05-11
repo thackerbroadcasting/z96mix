@@ -2,7 +2,10 @@
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
-import { REQUESTS } from "@consts";
+import { SITE, REQUESTS } from "@consts";
+
+const lightThemeSrc = `${SITE.EXTERNAL_LINK}/embed-requests?theme=light`;
+const darkThemeSrc = `${SITE.EXTERNAL_LINK}/embed-requests?theme=dark`;
 
 ---
 
@@ -13,14 +16,14 @@ import { REQUESTS } from "@consts";
       </h4>
       <br>
       <p class="animate">
-        This is YOUR station! Make requests to your hearts content*, and keep your favorites coming with more control than ever before. Even when we're not in the studio! If the request box below isn't displaying right, click <Link href=https://live.thackerbroadcasting.com/public/z96_mix>here</Link>.
+        This is YOUR station! Make requests to your hearts content*, and keep your favorites coming with more control than ever before. Even when we're not in the studio! If the request box below isn't displaying right, click <Link href={SITE.EXTERNAL_LINK}>here</Link>.
       </p>
       <br>
       <p class="animate">
         <!-- LIGHT MODE -->
-        <iframe class="dark:hidden" src="https://live.thackerbroadcasting.com/public/z96_mix/embed-requests?theme=light" allowtransparency="true" style="width: 100%; min-height: 925px; border: 0;"></iframe>
+        <iframe class="dark:hidden" src={lightThemeSrc} allowtransparency="true" style="width: 100%; min-height: 925px; border: 0;"></iframe>
         <!-- DARK MODE -->
-        <iframe class="hidden dark:block" src="https://live.thackerbroadcasting.com/public/z96_mix/embed-requests?theme=dark" allowtransparency="true" style="width: 100%; min-height: 925px; border: 0; color-scheme: light;"></iframe>
+        <iframe class="hidden dark:block" src={darkThemeSrc} allowtransparency="true" style="width: 100%; min-height: 925px; border: 0; color-scheme: light;"></iframe>
       </p>
     </Container>
 </PageLayout>
